@@ -1,0 +1,30 @@
+.post__item {
+	padding: 20px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+}
+
+.post__title {
+	display: block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.post__title:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.post__title:hover {
+	text-decoration: underline;
+}
+
+.post__text {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100ch;
+}

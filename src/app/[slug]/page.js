@@ -1,5 +1,14 @@
 import './singlePostPage.css';
 
+export async function generateMetadata({ params }) {
+    const { slug } = params;
+
+    return {
+        title: `post ${slug}`,
+        description: "Page with blog posts"
+    }
+}
+
 const getPost = async (slug) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
     if (!res.ok) {

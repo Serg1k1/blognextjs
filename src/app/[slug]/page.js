@@ -1,3 +1,5 @@
+import { getPost } from '../(server)/service';
+
 import './singlePostPage.css';
 
 export async function generateMetadata({ params }) {
@@ -7,14 +9,6 @@ export async function generateMetadata({ params }) {
         title: `post ${slug}`,
         description: "Page with blog posts"
     }
-}
-
-const getPost = async (slug) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-    if (!res.ok) {
-        throw new Error("Something went wrong");
-    }
-    return res.json();
 }
 
 const SinglePostPage = async ({ params }) => {

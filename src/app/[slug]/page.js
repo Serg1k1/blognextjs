@@ -1,3 +1,5 @@
+import './singlePostPage.css';
+
 const getPost = async (slug) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
     if (!res.ok) {
@@ -5,7 +7,6 @@ const getPost = async (slug) => {
     }
     return res.json();
 }
-
 
 const SinglePostPage = async ({ params }) => {
     const { slug } = params;

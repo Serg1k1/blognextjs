@@ -1,0 +1,13 @@
+.menu {
+	margin-bottom: 20px;
+}
+
+.homepage__link {
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+
+.homepage__link:hover {
+	text-decoration: underline;
+	color: #cccccc;
+}
